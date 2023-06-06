@@ -1,0 +1,645 @@
+
+/* importation des polices d'écriture  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+/* reset de base pour les projets html et css  */
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* Styles pour l'en-tête du site*/
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 1px solid #ffffff29;
+  }
+  
+ .logo{
+    margin: 0;
+    width: 20%; 
+    text-align: center;
+  }
+  .logo h1 {
+    font-size: 1.3rem;
+    color: white;
+  }
+  .logo h1 span {
+    font-size: 1.3rem;
+    color: #DC143C;
+  }
+
+  nav{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+  }
+
+     /* Styles pour le trait de soulignement dans l'en-tête*/
+     nav ul li a::after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        border-radius: 999999px;
+        transition: width 0.3s ease-in-out;
+      }
+  
+      /* Animation du trait de soulignement lors du survol */
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+
+  
+  /* Styles pour les sections */
+
+  /* style pour la premiere section acceuil  */
+
+   #accueil {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 80vh;
+   width: 100%;
+   background-color: #000000;
+   padding: 0px 50px;
+  }
+
+  #introduction{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 50%;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 0px 0px;
+  }
+  #bienvenue{
+    font-size: 50px;
+    color: white;
+    font-family: Gabriola;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+  #salutation{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
+  }
+  #nom{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 15px;
+  }
+  #profil{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 50px;
+
+  }
+  #profil span{
+    font-size: 20px;
+    color: #DC143C;
+  }
+  button{
+    width: 20%;
+    padding: 10px 3px;
+    background-color: #DC143C;
+    color: #000000;
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: red;
+  }
+
+
+  #ma_photo{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 45%;
+  }
+  #ma_photo img{
+    height: 100%;
+    width: 80%;
+    object-fit:contain;
+  }
+
+
+  /* style pour la deuxieme section a propos  */
+  
+  #apropos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 50px 0px;
+    font-family: Arial, sans-serif;
+  }
+
+  #apropos h2{
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+  }
+
+  .informations{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 20px;
+  }
+
+  #photo_apropos{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 35%;
+  }
+  #photo_apropos img{
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+    border-radius: 10px;
+  }
+  
+  #description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 60%;
+    color: rgb(0, 0, 0);
+    font-family: 'Ubuntu', sans-serif;
+    padding: 30px 0px;
+  }
+
+  #description h4{
+    font-size: 20px;
+    color:#DC143C;
+  }
+  #description p{
+    text-align: justify;
+    line-height: 20px;
+  }
+
+
+  #description .me-suivre{
+   height: auto;
+   width: 20%;
+   height: 80px;
+  }
+  .reseaux_sociaux{
+    display: flex;
+   text-align: center;
+    margin-bottom: 10px;
+  }
+  .reseaux_sociaux i{
+    text-align: center;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .me-suivre button{
+    width: 100%;
+    padding: 10px 3px;
+    background-color: #DC143C;
+    color: #ffffff;
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .me-suivre button:hover {
+    background-color: red;
+  }
+
+
+  /* Style de la troisieme section objectifs de mon site  */
+
+#objectifs{
+height: auto;
+width: 100%;
+padding: 50px 0px;
+background-color: #000000;
+}
+#objectifs h2{
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#objectifs .informations{
+height: auto;
+width: 80%;
+margin: auto;
+background-color: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.informations .notion{
+  height: 272px;
+  width: 280px;
+  border-radius: 5px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff28;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.notion:hover {
+  background-color: #DC143C;
+  transform: scale(1.1);
+}
+.notion:hover p{
+  color: #000000;
+}
+.notion:hover i{
+  color: #000000;
+}
+
+.notion>i{
+  font-size: 25px;
+  text-align: center;
+  color: #DC143C;
+width: 100%;
+}
+.notion>h4{
+  font-size: 16px;
+  text-align: center;
+width: 100%;
+color: rgba(255, 255, 255, 0.825);
+margin-bottom: 10px;
+}
+.notion>p{
+  font-size: 13px;
+  text-align:justify;
+width: 100%;
+color: #ffffff9e;
+line-height: 18px;
+}
+
+
+/* Style de la quatrième section experience de mon site  */
+
+#experience{
+  height: 70vh;
+width: 100%;
+padding: 50px 0px;
+}
+
+#experience h2{
+  font-size: 30px;
+  color: #000000;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.competences{
+  height: 90%;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.competences #informations{
+  height: 90%;
+  width: 51%;
+  padding: 0px 0px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#informations>h4{
+font-size: 20px;
+color: #DC143C;
+margin-bottom: 10px;
+}
+#informations>p{
+text-align: justify;
+line-height: 20px;
+margin-bottom: 20px;
+}
+
+#informations button{
+  width: 20%;
+  padding: 10px 3px;
+  background-color: #DC143C;
+  color: #ffffff;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#informations button:hover {
+  background-color: red;
+  color: #000000;
+}
+
+.competences #graphiques{
+  height: 90%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#graphiques .graph{
+  height: auto;
+  width: 100%;
+  padding: 0px 0px;
+}
+
+.graph .texte{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+}
+
+.texte >p{
+  font-size: 18px;
+}
+.texte .pourcentage{
+  font-size: 20px;
+}
+
+.graph >p{
+ width: 100%;
+ height: 4px;
+background-color: rgba(128, 128, 128, 0.44);
+display: flex;
+align-items: center;
+}
+
+.graph >p #html{
+  width: 91%;
+  height: 100%;
+  border-radius:0px 50px 50px 0px;
+  background-color: #DC143C;
+}
+.graph >p #css{
+  width: 82%;
+  height: 100%;
+  border-radius:0px 50px 50px 0px;
+  background-color: #DC143C;
+}
+.graph >p #js{
+  width: 60%;
+  height: 100%;
+  border-radius:0px 50px 50px 0px;
+  background-color: #DC143C;
+}
+.graph >p #vue{
+  width: 50%;
+  height: 100%;
+  border-radius:0px 50px 50px 0px;
+  background-color: #DC143C;
+}
+.graph >p #node{
+  width: 20%;
+  height: 100%;
+  border-radius:0px 50px 50px 0px;
+  background-color: #DC143C;
+}
+.graph >p #design{
+  width: 50%;
+  height: 100%;
+  border-radius:0px 50px 50px 0px;
+  background-color: #DC143C;
+}
+
+/* Style de la cinquieme section contact du site  */
+#contact{
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  background-color: #000000;
+  border-bottom: 1px solid #ffffff8b;
+
+}
+
+#contact h2{
+color: #fffffff6;
+font-size: 30px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact .informations{
+  height: 87%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.informations #coordonnes{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  justify-content: space-between;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+#coordonnes h4{
+  font-size: 20px;
+color: #DC143C;
+}
+
+#coordonnes .infos{
+height: 80px;
+width: 100%;
+display: flex;
+align-items: center;
+}
+
+.infos >i{
+font-size: 20px;
+color:#DC143C;
+}
+.infos .texte{
+  display: flex;
+  flex-direction: column;
+font-size: 16px;
+color: #ffffffed;
+margin-left: 15px;
+}
+.texte .name{
+font-size: 16px;
+color: #ffffff88;
+}
+
+
+.informations #formulaire{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 70px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#formulaire h4{
+  font-size: 20px;
+  color: #DC143C;
+}
+
+#formulaire .champ_de_saisie{
+  height: 70%;
+  width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+color: #000000;
+}
+
+.champ_de_saisie .nom_mail{
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+
+}
+
+.nom_mail  #name{
+  width: 49%;
+  height: 37px;
+  color: #000000;
+  background-color: #ffffffed;
+  padding: 0px 10px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.nom_mail  #gmail{
+  width: 50%;
+  height: 37px;
+  color: #000000;
+  background-color: #ffffffed;
+  padding: 0px 10px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.champ_de_saisie #objet{
+  width: 100%;
+  height: 37px;
+  color: #000000;
+  background-color: #ffffffed;
+  padding: 0px 10px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 98px;
+  color: #000000;
+  background-color: #ffffffed;
+  padding: 0px 10px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+#button{
+  width: 20%;
+  padding: 10px 3px;
+  background-color: #DC143C;
+  color: #ffffff;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#button:hover {
+  background-color: red;
+  color: #000000;
+}
+
+
+  /* Styles pour le pied de page */
+  footer {
+    background-color: #000000;
+    padding: 30px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+
+  }
+  footer >p{
+font-size: 16px;
+color: #ffffffce;
+  }
+  footer >p #lg{
+font-size: 18px;
+color: #ffffff;
+font-weight: bold;
+  }
+  footer >p span{
+font-size: 18px;
+color: #DC143C;
+font-weight: bold;
+
+  }
+  
